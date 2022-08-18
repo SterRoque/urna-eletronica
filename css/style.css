@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    vertical-align: middle;
+}
+body {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(65, 50, 31);
+}
+.container {
+    width: 750px;
+    height: 400px;
+    background: #eee;
+    margin: 70px auto;
+    padding: 25px;
+    border-radius: 10px;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: 4fr 1fr;
+    /* gap: 20px;; */
+    column-gap: 5px;;
+}
+.info {
+    width: 400px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    line-height: 35px;
+    
+}
+.info input {
+    width: 50px;
+    height: 70px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 35px;
+}
+.info img {
+    width: 150px;
+}
+.ajuda {
+    font-size: 16px;
+    /* grid-column: 1/-1; */
+    
+
+}
+.ajuda span {
+    display: inline-block;
+    width: 100%;
+    height: 5px;
+    border-top: 2px solid #000;
+    
+}
+
+.teclado {
+    width: 100%;
+    height: 100%;
+    background: #494949;
+    padding: 5px;
+    grid-column: 2;
+    grid-row: 1/-1;
+    text-align: center;
+}
+.titulo {
+    height: 70px;
+    background: #eee;
+    font-size: 16px;
+       
+
+}
+.titulo h2 {
+    padding-top: 10px;;
+}
+.titulo img {
+    width: 60px;
+    float: left;
+    margin-left: 20px;
+}
+.button1 {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    row-gap: 10px;
+    padding: 20px;
+    grid-template-areas:
+    "btn1 btn2 btn3"
+    "btn4 btn5 btn6"
+    "btn7 btn8 btn9"
+    ".btn0.";
+}
+.button1 button {
+    width: 60px;
+    height: 30px;
+    align-content: center;
+    border-radius: 5px;
+    background: #1a1a1a;
+    border: 0;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+.btn1 {
+    grid-area: btn1;
+}
+.btn2 {
+    grid-area: btn2;
+}
+.btn3 {
+    grid-area: btn3;
+}
+.btn4 {
+    grid-area: btn4;
+}
+.btn5 {
+    grid-area: btn5;
+}
+.btn6 {
+    grid-area: btn6;
+}
+.btn7 {
+    grid-area: btn7;
+}
+.btn8 {
+    grid-area: btn8;
+}
+.btn9 {
+    grid-area: btn9;
+}
+.btn0 {
+    grid-area: btn0;
+}
+.button2 button{
+    margin-top: 20px;
+    width: 30%;
+    height: 40px;
+    padding: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+}
+.btnBranco {
+    background: #fff;
+}
+.btnCorrigir {
+    background: #f57d2d;
+}
+.btnConfirmar {
+    background: #2afd00;
+}
