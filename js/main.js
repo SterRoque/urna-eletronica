@@ -3,9 +3,6 @@ var num2 = document.querySelector('.campo2');
 var nome = document.querySelector('.nome');
 var partido = document.querySelector('.partido');
 var img = document.querySelector('.img');
-var btnBranco = document.querySelector('.btnBranco');
-var btnCorrigir = document.querySelector('.btnCorrigir');
-var btnConfirmar = document.querySelector('.btnConfirmar');
 var container = document.querySelector('.container');
 var confirmar = document.querySelector('.confirmar');
 var votoBrancoMsg = document.querySelector('.votoBranco');
@@ -95,6 +92,12 @@ function candidatos(n1, n2) {
         partido.innerHTML = 'UP';
         img.style.background = "url('img/leonardo.jpg') no-repeat center";
         img.style.backgroundSize = 'cover';
+
+    } else if (voto == '14') {
+        nome.innerHTML = 'Roberto Jefferson';
+        partido.innerHTML = 'PTB';
+        img.style.background = "url('img/roberto.jpg') no-repeat center";
+        img.style.backgroundSize = 'cover';
     }
     
 }
@@ -114,6 +117,8 @@ function votar() {
     alert('Voto confirmado no candidato ' + candidato);
     limpa();
 
+    container.style.display = 'none';
+    confirmar.style.display = 'block';
 }
 function limpa() {
     num1.value = "";
@@ -123,30 +128,7 @@ function limpa() {
     partido.innerHTML = "";
 }
 
-btnConfirmar.onclick = function() {
-    // container.style.display = 'none';
-    // confirmar.style.display = 'block';
-
-    votar(num1, num2);
-    
-
-}
-
-function resultado() {
-    document.querySelector('.resultado').innerHTML = "";
-    document.querySelector(".resultado").innerHTML += "Votos em branco " + sessionStorage.getItem(0) + "<br/>"; 
-    
-    for(let i = 1; i < 100; i++) {
-        if (sessionStorage.getItem(i) !== null) {
-            document.querySelector(".resultado").innerHTML += "Candidato "+i+" tem "+sessionStorage.getItem(i)+" votos<br/>";
-            
-        } 
-    }
-    
-}
-
-
-btnBranco.onclick = function() {
+function votarBranco() {
     let candidato = 0;
 
     if(sessionStorage.getItem(candidato) !== null){
@@ -157,11 +139,22 @@ btnBranco.onclick = function() {
         sessionStorage.setItem(candidato, 1);
 
     }
-
     info.style.display = 'none';
-    votoBrancoMsg.style.display = 'block'; 
-    
-    
+    votoBrancoMsg.style.display = 'block';   
 }
+
+function resultado() {
+    votosBranco = 0;
+    document.querySelector('.resultado').innerHTML = "";
+    document.querySelector(".resultado").innerHTML += "Votos em branco " + sessionStorage.getItem(0) + "<br/>"; 
+    
+    for(let i = 1; i < 100; i++) {
+        if (sessionStorage.getItem(i) !== null) {
+            document.querySelector(".resultado").innerHTML += "Candidato "+i+" tem "+sessionStorage.getItem(i)+" votos<br/>";
+            
+        } 
+    }
+}
+
 
    
