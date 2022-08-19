@@ -28,6 +28,17 @@ a {
     bottom: -50px;
     left: 45%;
 }
+.btnResul {
+    position: absolute;
+    bottom: -50px;
+    left: 55%;
+}
+
+.candidatos {
+    position: absolute;
+    bottom: -50px;
+    left: 35%;
+}
 .confirmar {
     width: 750px;
     height: 400px;
