@@ -55,6 +55,22 @@ a {
     text-align: center;
     margin: 100px auto;
 }
+.modo {
+    width: 750px;
+    height: 400px;
+    background: #eee;
+    margin: 70px auto;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 100PX;
+    display: none;
+}
+.modo h2 {
+    font-size: 30px;
+    text-align: center;
+    margin: 100px auto;
+}
 .votoBranco {
     width: 100%;
     height: auto;
@@ -221,6 +237,7 @@ a {
 @media all and (max-width: 800px) {
     .container {
         width: 100%;
+        height: 100%;
         font-size: 1rem;
     }
 
@@ -272,6 +289,15 @@ a {
         font-size: 0.8rem;
     }
 
+}
+@media all and (max-width: 550px) {
+    .container, .candidatos, .btnResul {
+        display: none;
+    }
+    .modo {
+        display: block;
+        width: 100%;
+    }
 }
 
 
